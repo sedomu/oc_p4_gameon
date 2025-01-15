@@ -2,6 +2,9 @@
 
 OpenClassrooms - dév JS react - projet 4 - gameon
 
+## Version en ligne
+Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-website-FR/)
+
 ## Projet GameOn
 1. Forkez ce repo ;
 2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
