@@ -9,7 +9,7 @@ OpenClassrooms - dév JS react - projet 4 - gameon
 4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
 
 ## issues
-- [ ] TODO : fermer la modale
+- [X] TODO : fermer la modale
 - [ ] Implémenter entrées du formulaire
 - [ ] Ajouter validation ou messages d'erreur
 - [ ] Ajouter confirmation quand envoi réussi
