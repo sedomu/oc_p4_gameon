@@ -14,7 +14,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -99,7 +98,27 @@ img {
     display: block;
     margin-top: -15px;
   }
-} 
+}
+
+/* Integrating font-awesome asset instead of relying on CDN */
+/* Avoid loading entire library just for 1 occurence + avoiding console errors on unused glyphs */
+a.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+.topnav.responsive .burger-menu,
+a.icon:hover > .burger-menu {
+    fill: #ffffff;
+}
+
+.burger-menu {
+    height: 20px;
+    fill: #ff0000;
+}
 
 main {
   font-size: 130%;
@@ -332,6 +351,11 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+.btn-submit[disabled] {
+  background: #fe142f4a;
+  color: #ffffff28;
+  cursor: default;
 }
 /* custom select styles */
 .custom-select {
