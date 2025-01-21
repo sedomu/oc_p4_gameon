@@ -124,6 +124,8 @@ for (let i = 0; i < allInputs.length; i++){
     const scoreValid = firstValid + lastValid + emailValid + quantityValid + locationValid + termsValid;
     if (scoreValid === 6) {
       submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
     }
   })
 }
