@@ -352,6 +352,11 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+.btn-submit[disabled] {
+  background: #fe142f4a;
+  color: #ffffff28;
+  cursor: default;
+}
 /* custom select styles */
 .custom-select {
   position: relative;
