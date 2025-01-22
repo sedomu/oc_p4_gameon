@@ -205,7 +205,32 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  position: relative;
 }
+
+.modal-validation {
+  /* opacity: 0.2; */
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  padding: 15px 40px;
+}
+
+.validation-txt {
+  font-size: 36px;
+  text-align: center;
+
+}
+
+
 
 label {
   font-family: var(--font-default);
@@ -324,6 +349,7 @@ input[data-error]::after {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  z-index: 100;
 }
 .close:before,
 .close:after {
@@ -341,7 +367,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-validation {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -351,6 +378,11 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+.btn-submit,
+.btn-validation {
+  width: 240px;
+  /* text-align: center; */
 }
 .btn-submit[disabled] {
   background: #fe142f4a;
