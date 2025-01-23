@@ -1,3 +1,6 @@
+/**
+ * On small devices, manages deployment and withdraw of the dropdown menu on click on the burger icon. 
+ */
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -7,7 +10,10 @@ function editNav() {
   }
 }
 
-// form fields initialisation
+/**
+ * Form fields initialisation. 
+ * When called, each input in the subscription form is reset to null. 
+ */
 function resetForm(){
   firstName.value = "";
   lastName.value = "";
@@ -21,7 +27,12 @@ function resetForm(){
   news.checked = false;
 }
 
-// verify regular expressions
+/**
+ * Verify regular expressions. 
+ * @param {Element} element - A single HTML element whose .value as to be checked
+ * @param {RegExp} expr - A RegExp element for the HTML element.value to be checked against
+ * @returns {number} 1 if the check passes/0 if the check fails
+ */
 function exprCheck(element, expr) {
   if (element.value === "" || !expr.test(element.value)) {
     element.parentElement.setAttribute("data-error-visible", "true");
@@ -37,7 +48,14 @@ function exprCheck(element, expr) {
   }
 }
 
-// names verification function
+/**
+ * Names verification function. 
+ * Takes a DOM element and throws it into exprCheck(), against the "exprName" RegExp. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Element} name - DOM element representing a name
+ * @param {string} position - Accepts 'first' or 'last' keywords only
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function nameCheck(name, position) {
   let score = exprCheck(name, exprName);
 
@@ -51,9 +69,15 @@ function nameCheck(name, position) {
   }
 
   return score;
-}
+} 
 
-// email verification function
+/**
+ * Email verification function. 
+ * Takes a DOM element and throws it into exprCheck(), against the "exprEmail" RegExp. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Element} email - DOM element representing an email address
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function emailCheck(email) {
     let score = exprCheck(email, exprEmail);
 
@@ -64,7 +88,13 @@ function emailCheck(email) {
     return score;
 }
 
-// date verification function
+/**
+ * Date verification function. 
+ * Takes a DOM element and checks if the date actually exists. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Element} date DOM element representing a date
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function dateCheck(date){
     let score = 0;
 
@@ -81,7 +111,13 @@ function dateCheck(date){
     return score;
 }
 
-// quantity verification function
+/**
+ * Quantity verification function. 
+ * Takes a DOM element and throws it into exprCheck(), against the "exprQuantity" RegExp. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Element} quantity - DOM element representing a number
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function quantityCheck(quantity){
     let score = exprCheck(quantity, exprQuantity);
 
@@ -92,7 +128,13 @@ function quantityCheck(quantity){
     return score;
 }
 
-// radio buttons check function
+/**
+ * Radio buttons check function. 
+ * Takes an array of DOM elements and checks if one of them is actually checked. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Array} radio - Array of radio buttons
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function radioCheck(radio){
   let score = 0;
 
@@ -115,6 +157,12 @@ function radioCheck(radio){
 }
 
 // checkbox "checked" function
+/**
+ * Checks if a checkboxe is actually checked. 
+ * If the test fails, the parent element is modified to an error state (.data-error .data-error-visible). 
+ * @param {Element} checkbox - A DOM element respresenting a single checkbox
+ * @returns 1 if the check passes/0 if the check fails
+ */
 function checkboxCheck(checkbox){
   let score = 0;
 
