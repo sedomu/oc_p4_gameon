@@ -20,8 +20,8 @@
   margin: 0;
 }
 
-/* Landing Page */
-
+/* #### Landing Page #### */
+/* #### Global #### */
 body {
   margin: 0;
   flex-direction: column;
@@ -45,6 +45,8 @@ img {
   padding-right: 1rem;
 }
 
+/* #### Header #### */
+/* #### Header global #### */
 .topnav {
   overflow: hidden;
   display: flex;
@@ -53,6 +55,7 @@ img {
   align-items: end;
 }
 
+/* #### Header logo #### */
 .header-logo .homepage-link {
   padding: 0;
   margin: 0;
@@ -60,11 +63,16 @@ img {
   align-items: center;
 }
 
+.header-logo .homepage-link:hover{
+  background: none;
+}
+
 .header-logo>a>img {
   height: 50px;
   padding: 0;
 }
 
+/* #### Header nav #### */
 .main-navbar {
   float: right;
 }
@@ -101,10 +109,7 @@ img {
   display: none;
 }
 
-.header-logo a:hover {
-  background: none;
-}
-
+/* #### Header breakpoints #### */
 @media screen and (max-width: 768px) {
   .topnav a {
     display: none;
@@ -114,9 +119,7 @@ img {
     float: right;
     display: block;
   }
-}
 
-@media screen and (max-width: 768px) {
   .topnav.responsive {
     position: relative;
   }
@@ -133,8 +136,6 @@ img {
     text-align: left;
   }
 }
-
-
 
 @media screen and (max-width: 540px) {
   .topnav a {
@@ -262,7 +263,7 @@ footer {
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  font-size: 0.875rem;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -279,18 +280,24 @@ input {
   padding: 8px;
   width: 100%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 1.125rem;
   height: 48px;
+  font-family: var(--font-default);
+}
+
+.formData {
+  margin-bottom: 12px;
 }
 
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: 0.625rem;
   color: #e54858;
+  font-family: var(--font-secondary);
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
+  text-align: left;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
@@ -315,38 +322,39 @@ input[data-error]::after {
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
+  font-family: var(--font-secondary);
+  line-height: 2.2;
+  padding: 0 6px;
 }
 
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
   display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #279e7a;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #c4c4c4;
   border-radius: 50%;
-  text-indent: 29px;
   white-space: nowrap;
   position: absolute;
   left: -30px;
-  top: -1px;
   transition: 0.3s;
 }
 
-.checkbox-label .checkbox-icon::after,
-.checkbox2-label .checkbox-icon::after {
+input:checked + .checkbox-label .checkbox-icon {
+  border: 1px solid #279e7a;
+}
+
+.checkbox-label .checkbox-icon::after {
   content: "";
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   background-color: #279e7a;
   border-radius: 50%;
-  text-indent: 29px;
-  white-space: nowrap;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 3px;
+  top: 3px;
   transition: 0.3s;
   opacity: 0;
 }
@@ -365,22 +373,16 @@ input[data-error]::after {
 }
 
 .checkbox2-label .checkbox-icon {
-  border-radius: 4px;
+  border-radius: 6px;
   border: 0;
   background: #c4c4c4;
 }
 
-.checkbox2-label .checkbox-icon::after {
-  width: 7px;
-  height: 4px;
-  border-radius: 2px;
-  background: transparent;
-  border: 2px solid transparent;
-  border-bottom-color: #fff;
-  border-left-color: #fff;
-  transform: rotate(-55deg);
-  left: 21%;
-  top: 19%;
+input:checked + .checkbox2-label .checkbox-icon::after {
+  content: url(./check.svg);
+  position: absolute;
+  left: 6px;
+  top: 0px;
 }
 
 .close {
@@ -430,6 +432,8 @@ input[data-error]::after {
 .btn-submit,
 .btn-validation {
   width: 240px;
+  font-family: var(--font-default);
+  font-size: 0.875rem;
 }
 
 .btn-submit[disabled] {
@@ -509,7 +513,8 @@ input[data-error]::after {
 /* custom select end */
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
 }
 
 .hero-section {
