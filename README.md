@@ -17,9 +17,6 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 - [X] Ajouter validation ou messages d'erreur
 - [X] Ajouter confirmation quand envoi réussi
 - [X] Tests manuels
-
-
-
 - [ ] +1: voir conclusions protocole de test
 
 ## protocole de test
