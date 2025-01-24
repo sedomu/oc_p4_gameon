@@ -70,3 +70,7 @@ tests manuels pour valider la vérification des données
 | injection: clic sur `submit`avec 1 erreur sur le formulaire (`submitBtn.disabled = false;` via la console) | Submit | N/A | ❌ | ❌ | ✅ |
 
 Conclusion des tests: tous ok sauf 1. Les accents ne devraient pas être acceptés dans une adresse e-mail.
+Tentative de correction en (double)-échappant le caractère `.`.
+La solution qui est correcte sur Regex101 (``^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$``), laisse l'utilisateur mettre une lettre accentuée dans le domaine du mail (``RegExp("^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$")``).
+
+> Issue: les accents ne passent pas dans la validation d'une adresse e-mail, sauf au niveau du domaine.

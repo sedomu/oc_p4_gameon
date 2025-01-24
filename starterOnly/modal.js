@@ -237,7 +237,7 @@ if (terms.checked) {
 
 // regular expressions
 const exprName = new RegExp("^[A-Za-zÀ-ÿ -]{2,}$");
-const exprEmail = new RegExp("^[a-z0-9-_.]+@[a-z0-9-_.]+\\.[a-z]{2,}$");
+const exprEmail = new RegExp("^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$");
 const exprQuantity = new RegExp("^\\d{1,2}$");
 
 // by default, disable submit button
