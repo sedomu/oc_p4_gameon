@@ -22,4 +22,19 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 tests manuels pour valider la vérification des données
 | Description | Champ | Valeur | Résultat attendu | Résultat obtenu | Conclusion |
 | ----------- | ----- | ------ | ---------------- | --------------- | ---------- |
+| Remplissage correct du formulaire | Tous | Accès page validation |  |  |  |
+| validation de champ | Prénom |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
+| validation de champ |  |  |  |  |  |
 |  |  |  |  |  |  |
