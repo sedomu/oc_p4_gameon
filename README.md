@@ -13,7 +13,13 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 
 ## issues
 - [X] TODO : fermer la modale
-- [ ] Implémenter entrées du formulaire
-- [ ] Ajouter validation ou messages d'erreur
-- [ ] Ajouter confirmation quand envoi réussi
+- [X] Implémenter entrées du formulaire
+- [X] Ajouter validation ou messages d'erreur
+- [X] Ajouter confirmation quand envoi réussi
 - [ ] Tests manuels
+
+## protocole de test
+tests manuels pour valider la vérification des données
+| Description | Champ | Valeur | Résultat attendu | Résultat obtenu | Conclusion |
+| ----------- | ----- | ------ | ---------------- | --------------- | ---------- |
+|  |  |  |  |  |  |
