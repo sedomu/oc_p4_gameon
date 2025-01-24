@@ -182,6 +182,7 @@ function checkboxCheck(checkbox){
 // DOM Elements
 const body = document.querySelector("body");
 const modalbg = document.querySelector(".bground");
+const modalForm = document.querySelector(".modal-body > form");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalValid = document.querySelector(".modal-validation");
 const formData = document.querySelectorAll(".formData");
@@ -313,7 +314,8 @@ submitBtn.addEventListener("click", (e) => {
 
   if (submitScore === 7) {
     modalValid.style.display = "flex";
-    modalValid.style.height = "min(calc(100vh - 80px),900px)";
+    modalbg.scrollTo(0,0);
+    modalbg.classList.add("responsive-behaviour");
   } else {
     // warning messages are displayed using ...Check functions
     submitBtn.disabled = true;

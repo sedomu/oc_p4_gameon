@@ -695,6 +695,14 @@ input:checked + .checkbox2-label .checkbox-icon::after {
     overflow-x: hidden;
   }
 
+  .modal-validation {
+    height: max(100vh - 80px - 20px);
+  }
+
+  .responsive-behaviour {
+    overflow: hidden;
+  }
+
   footer {
     margin-top: 30px;
   }
