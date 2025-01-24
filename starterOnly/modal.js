@@ -180,6 +180,7 @@ function checkboxCheck(checkbox){
 }
 
 // DOM Elements
+const body = document.querySelector("body");
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalValid = document.querySelector(".modal-validation");
@@ -205,11 +206,14 @@ closeBtn.addEventListener("click", closeModal);
 
 // launch modal form
 function launchModal() {
+  window.scrollTo(0,0);
+  body.classList.add("overflow-hidden");
   modalbg.style.display = "block";
 }
 
 // close modal form
 function closeModal(){
+  body.classList.remove("overflow-hidden");
   modalbg.style.display = "none";
 }
 
@@ -309,6 +313,7 @@ submitBtn.addEventListener("click", (e) => {
 
   if (submitScore === 7) {
     modalValid.style.display = "flex";
+    modalValid.style.height = "min(calc(100vh - 80px),900px)";
   } else {
     // warning messages are displayed using ...Check functions
     submitBtn.disabled = true;
