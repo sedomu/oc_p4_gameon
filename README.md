@@ -19,6 +19,7 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 - [X] Tests manuels
 
 
+
 - [ ] +1: voir conclusions protocole de test
 
 ## protocole de test
