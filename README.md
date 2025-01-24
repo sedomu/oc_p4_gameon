@@ -16,7 +16,9 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 - [X] Implémenter entrées du formulaire
 - [X] Ajouter validation ou messages d'erreur
 - [X] Ajouter confirmation quand envoi réussi
-- [ ] Tests manuels
+- [X] Tests manuels
+
+- [ ] +1: voir conclusions protocole de test
 
 ## protocole de test
 tests manuels pour valider la vérification des données
@@ -74,3 +76,5 @@ Tentative de correction en (double)-échappant le caractère `.`.
 La solution qui est correcte sur Regex101 (``^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$``), laisse l'utilisateur mettre une lettre accentuée dans le domaine du mail (``RegExp("^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$")``).
 
 > Issue: les accents ne passent pas dans la validation d'une adresse e-mail, sauf au niveau du domaine.
+> Testé sur mon mobile (iPhone/Firefox): tous les accents sont bien rejetés.
+> Retour sur MacOS: ce mauvais comportement ne concerne que les navigateurs sous Chromium (Arc, Chrome, Opera). Ok avec Gecko et WebKit.
