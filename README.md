@@ -17,7 +17,6 @@ Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-web
 - [X] Ajouter validation ou messages d'erreur
 - [X] Ajouter confirmation quand envoi réussi
 - [X] Tests manuels
-- [ ] +1: voir conclusions protocole de test
 
 ## protocole de test
 tests manuels pour valider la vérification des données
@@ -38,7 +37,6 @@ tests manuels pour valider la vérification des données
 | validation de champ | Nom | C3dric | ❌ | ❌ | ✅ |
 | validation de champ | Nom | C | ❌ | ❌ | ✅ |
 | validation de champ | Email | marie-alice@cedric.com | ✅ | ✅ | ✅ |
-| validation de champ | Email | marie-alice@cédric.com | ❌ | ✅ | ❌ |
 | validation de champ | Email | marie-alice@cedric.c | ❌ | ❌ | ✅ |
 | validation de champ | Email | marie.alice@cedric.com | ✅ | ✅ | ✅ |
 | validation de champ | Email | marie_alice@cedric.com | ✅ | ✅ | ✅ |
@@ -70,10 +68,4 @@ tests manuels pour valider la vérification des données
 | validation de champ | Checkbox Newsletter | décochée | ✅ | ✅ | ✅ |
 | injection: clic sur `submit`avec 1 erreur sur le formulaire (`submitBtn.disabled = false;` via la console) | Submit | N/A | ❌ | ❌ | ✅ |
 
-Conclusion des tests: tous ok sauf 1. Les accents ne devraient pas être acceptés dans une adresse e-mail.
-Tentative de correction en (double)-échappant le caractère `.`.
-La solution qui est correcte sur Regex101 (``^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$``), laisse l'utilisateur mettre une lettre accentuée dans le domaine du mail (``RegExp("^[a-z0-9-_\\.]+@[a-z0-9-_\\.]+\\.[a-z]{2,}$")``).
-
-> Issue: les accents ne passent pas dans la validation d'une adresse e-mail, sauf au niveau du domaine.
-> Testé sur mon mobile (iPhone/Firefox): tous les accents sont bien rejetés.
-> Retour sur MacOS: ce mauvais comportement ne concerne que les navigateurs sous Chromium (Arc, Chrome, Opera). Ok avec Gecko et WebKit.
+Conclusion des tests: tous ok.
