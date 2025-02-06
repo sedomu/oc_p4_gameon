@@ -102,6 +102,10 @@ function dateCheck(date){
       score = 0;
       date.parentElement.setAttribute("data-error-visible", "true");
       date.parentElement.setAttribute("data-error", "Veuillez renseigner une date correcte jj/mm/aaaa");
+    } else if (Date.parse(date.value) > Date.now()) {
+      score = 0;
+      date.parentElement.setAttribute("data-error-visible", "true");
+      date.parentElement.setAttribute("data-error", "Votre date de naissance ne peut pas être située dans le futur");
     } else {
       score = 1;
       date.parentElement.setAttribute("data-error-visible", "false");

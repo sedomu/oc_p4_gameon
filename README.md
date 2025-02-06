@@ -45,13 +45,14 @@ tests manuels pour valider la vérification des données
 | validation de champ | Email | marie-alice@cedric | ❌ | ❌ | ✅ |
 | validation de champ | Email | marie-alice@cedric. | ❌ | ❌ | ✅ |
 | validation de champ | Email | marie!alice@cedric.com | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance | 01/01/2000 | ✅ | ✅ | ✅ |
-| validation de champ | Date de naissance | cedric | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance | 25 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance | 28/02/2025 | ✅ | ✅ | ✅ |
-| validation de champ | Date de naissance | 31/02/2025 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance | 29/02/2025 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance | 29/02/2024 | ✅ | ✅ | ✅ |
+| validation de champ | Date de naissance (date correcte) | 01/01/2000 | ✅ | ✅ | ✅ |
+| validation de champ | Date de naissance (format incorrect) | cedric | ❌ | ❌ | ✅ |
+| validation de champ | Date de naissance (format incorrect) | 25 | ❌ | ❌ | ✅ |
+| validation de champ | Date de naissance (date correcte) | 28/02/2024 | ✅ | ✅ | ✅ |
+| validation de champ | Date de naissance (date inexistante) | 31/02/2025 | ❌ | ❌ | ✅ |
+| validation de champ | Date de naissance (date inexistante) | 29/02/2023 | ❌ | ❌ | ✅ |
+| validation de champ | Date de naissance (date année bissextile) | 29/02/2024 | ✅ | ✅ | ✅ |
+| validation de champ | Date de naissance (date future) | 31/12/2100 | ❌ | ❌ | ✅ |
 | validation de champ | Nombre de tournois | 0 | ✅ | ✅ | ✅ |
 | validation de champ | Nombre de tournois | 1 | ✅ | ✅ | ✅ |
 | validation de champ | Nombre de tournois | 01 | ✅ | ✅ | ✅ |
