@@ -4,7 +4,7 @@
 
 Source code of **Project 4 - GameOn**: *Create a landing page with JavaScript*, completed as part of the **OpenClassrooms JavaScript React Developer path**.  
 
-This project focuses on practicing **JavaScript form validation, with regular expressions, and DOM manipulation**.
+This project focuses on practicing **JavaScript form validation with regular expressions and DOM manipulation**.
 
 ⚠️ **Educational project**: This repository was created for learning purposes during my training. It is **not intended for production use**.
 
@@ -12,7 +12,11 @@ This project focuses on practicing **JavaScript form validation, with regular ex
 
 ## 🎯 Learning Objectives
 
-- Program in JavaScript
+- Write JavaScript programs
+- Implement form validation with JavaScript and regex
+- Manipulate the DOM dynamically
+- Ensure input sanitization and error handling
+- Apply clean code practices in vanilla JS
 
 ---
 
@@ -37,8 +41,9 @@ This project focuses on practicing **JavaScript form validation, with regular ex
 
 ## 🏗 Project structure
 
-- `index.html` → Main HTML file
-- `modal.js` → JavaScript for handling modal display and form validations
+- `src/`
+    - `index.html` → Main HTML file
+    - `modal.js` → JavaScript for handling modal display and form validations
 
 ---
 
@@ -87,13 +92,6 @@ Not applicable – no build tools or package managers are needed for this projec
 
 ---
 
-## ⚠️ Disclaimer
-
-This is a **training project** created as part of the OpenClassrooms curriculum.  
-Some implementations (e.g., accessibility, performance optimization, authentication) are simplified and may not meet production standards.
-
----
-
 ## ❌ Issues on the original repo
 
 - [X] TODO : close the modal
@@ -106,55 +104,14 @@ Some implementations (e.g., accessibility, performance optimization, authenticat
 
 ## ✅ Tests protocol
 
-Manual tests to verify form validation
+42 manual test cases were implemented to verify form validation logic.  
 
-| Description                                                                                       | Field                 | Value                  | Expected result             | Actual result               | Conclusion |
-| ------------------------------------------------------------------------------------------------- | --------------------- | ---------------------- | --------------------------- | --------------------------- | ---------- |
-| Correct form submission                                                                           | All                   | Valid inputs           | Access to confirmation page | Access to confirmation page | ✅         |
-| Form validation                                                                                   | First name            | Cedric                 | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | First name            | Cédric                 | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | First name            | Marie-Alice            | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | First name            | Marie Alice            | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | First name            | C3dric                 | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | First name            | C                      | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Last name             | Cedric                 | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Last name             | Cédric                 | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Last name             | Marie-Alice            | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Last name             | Marie Alice            | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Last name             | C3dric                 | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Last name             | C                      | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie-alice@cedric.com | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie-alice@cedric.c   | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie.alice@cedric.com | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie_alice@cedric.com | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie-alice75@cedric.com | ✅                        | ✅                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie@alice75@cedric.com | ❌                        | ❌                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie-alice@cedric     | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie-alice@cedric.    | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | E-mail                | marie!alice@cedric.com | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Birth date            | 01/01/2000             | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Birth date            | cedric                 | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Birth date            | 25                     | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Birth date            | 28/02/2024             | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Birth date            | 31/02/2025             | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Birth date            | 29/02/2023             | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Birth date            | 29/02/2024             | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Birth date            | 31/12/2100             | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 0                      | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 1                      | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 01                     | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 99                     | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 100                    | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | 099                    | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | -1                     | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Number of tournaments | e                      | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Radio buttons         | One selected           | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Radio buttons         | None selected          | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Checkbox T&C          | Checked                | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Checkbox T&C          | Unchecked              | ❌                          | ❌                          | ✅         |
-| Form validation                                                                                   | Checkbox Newsletter   | Checked                | ✅                          | ✅                          | ✅         |
-| Form validation                                                                                   | Checkbox Newsletter   | Unchecked              | ✅                          | ✅                          | ✅         |
-| Injection: forced `submit` click with 1 invalid field (`submitBtn.disabled = false;` via console) | Submit                | N/A                    | ❌                          | ❌                          | ✅         |
+✅  All tests passed successfully.  
 
-**Test conclusion**: All test cases passed successfully.
-Form validation behaves consistently, as the same JavaScript logic is executed regardless of the display context (desktop or mobile). ✅
+[See TESTS.md](./TESTS.md)
+
+---
+
+## ⚠️ Disclaimer
+
+This project was created as part of the OpenClassrooms curriculum. **It is not intended for production use.** Some implementations (e.g., accessibility, performance optimization, authentication) were intentionally simplified to **focus on JavaScript form validation.**
