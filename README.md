@@ -1,72 +1,117 @@
-# oc-projet4
+# Open Classrooms - Project 4 GameOn
 
-OpenClassrooms - dév JS react - projet 4 - gameon
+## 📌 Description
 
-## Version en ligne
-Branche `Master` publiée sur [GitHub Pages](https://sedomu.github.io/GameOn-website-FR/)
+Source code of **Project 4 - GameOn**: *Create a landing page with JavaScript*, completed as part of the **OpenClassrooms JavaScript React Developer path**.  
 
-## Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+This project focuses on practicing **JavaScript form validation with regular expressions and DOM manipulation**.
 
-## issues
-- [X] TODO : fermer la modale
-- [X] Implémenter entrées du formulaire
-- [X] Ajouter validation ou messages d'erreur
-- [X] Ajouter confirmation quand envoi réussi
-- [X] Tests manuels
+⚠️ **Educational project**: This repository was created for learning purposes during my training. It is **not intended for production use**.
 
-## protocole de test
-tests manuels pour valider la vérification des données
+---
 
-| Description | Champ | Valeur | Résultat attendu | Résultat obtenu | Conclusion |
-| ----------- | ----- | ------ | ---------------- | --------------- | ---------- |
-| Remplissage correct du formulaire | Tous | Correctes | Accès page validation | Accès page validation | ✅ |
-| validation de champ | Prénom | Cedric | ✅ | ✅ | ✅ |
-| validation de champ | Prénom | Cédric | ✅ | ✅ | ✅ |
-| validation de champ | Prénom | Marie-Alice | ✅ | ✅ | ✅ |
-| validation de champ | Prénom | Marie Alice | ✅ | ✅ | ✅ |
-| validation de champ | Prénom | C3dric | ❌ | ❌ | ✅ |
-| validation de champ | Prénom | C | ❌ | ❌ | ✅ |
-| validation de champ | Nom | Cedric | ✅ | ✅ | ✅ |
-| validation de champ | Nom | Cédric | ✅ | ✅ | ✅ |
-| validation de champ | Nom | Marie-Alice | ✅ | ✅ | ✅ |
-| validation de champ | Nom | Marie Alice | ✅ | ✅ | ✅ |
-| validation de champ | Nom | C3dric | ❌ | ❌ | ✅ |
-| validation de champ | Nom | C | ❌ | ❌ | ✅ |
-| validation de champ | Email | marie-alice@cedric.com | ✅ | ✅ | ✅ |
-| validation de champ | Email | marie-alice@cedric.c | ❌ | ❌ | ✅ |
-| validation de champ | Email | marie.alice@cedric.com | ✅ | ✅ | ✅ |
-| validation de champ | Email | marie_alice@cedric.com | ✅ | ✅ | ✅ |
-| validation de champ | Email | marie-alice75@cedric.com | ✅ | ✅ | ✅ |
-| validation de champ | Email | marie@alice75@cedric.com | ❌ | ❌ | ✅ |
-| validation de champ | Email | marie-alice@cedric | ❌ | ❌ | ✅ |
-| validation de champ | Email | marie-alice@cedric. | ❌ | ❌ | ✅ |
-| validation de champ | Email | marie!alice@cedric.com | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance (date correcte) | 01/01/2000 | ✅ | ✅ | ✅ |
-| validation de champ | Date de naissance (format incorrect) | cedric | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance (format incorrect) | 25 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance (date correcte) | 28/02/2024 | ✅ | ✅ | ✅ |
-| validation de champ | Date de naissance (date inexistante) | 31/02/2025 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance (date inexistante) | 29/02/2023 | ❌ | ❌ | ✅ |
-| validation de champ | Date de naissance (date année bissextile) | 29/02/2024 | ✅ | ✅ | ✅ |
-| validation de champ | Date de naissance (date future) | 31/12/2100 | ❌ | ❌ | ✅ |
-| validation de champ | Nombre de tournois | 0 | ✅ | ✅ | ✅ |
-| validation de champ | Nombre de tournois | 1 | ✅ | ✅ | ✅ |
-| validation de champ | Nombre de tournois | 01 | ✅ | ✅ | ✅ |
-| validation de champ | Nombre de tournois | 99 | ✅ | ✅ | ✅ |
-| validation de champ | Nombre de tournois | 100 | ❌ | ❌ | ✅ |
-| validation de champ | Nombre de tournois | 099 | ❌ | ❌ | ✅ |
-| validation de champ | Nombre de tournois | -1 | ❌ | ❌ | ✅ |
-| validation de champ | Nombre de tournois | e | ❌ | ❌ | ✅ |
-| validation de champ | Boutons radio | 1 coché | ✅ | ✅ | ✅ |
-| validation de champ | Boutons radio | aucun coché | ❌ | ❌ | ✅ |
-| validation de champ | Checkbox CGU | cochée | ✅ | ✅ | ✅ |
-| validation de champ | Checkbox CGU | décochée | ❌ | ❌ | ✅ |
-| validation de champ | Checkbox Newsletter | cochée | ✅ | ✅ | ✅ |
-| validation de champ | Checkbox Newsletter | décochée | ✅ | ✅ | ✅ |
-| injection: clic sur `submit`avec 1 erreur sur le formulaire (`submitBtn.disabled = false;` via la console) | Submit | N/A | ❌ | ❌ | ✅ |
+## 🎯 Learning Objectives
 
-Conclusion des tests: tous ok.
+- Write JavaScript programs
+- Implement form validation with JavaScript and regex
+- Manipulate the DOM dynamically
+- Ensure input sanitization and error handling
+- Apply clean code practices in vanilla JS
+
+---
+
+## 🔗 Provided Resources
+
+- [Design template on Figma](https://www.figma.com/design/B7NKBDvSI18uoMLJgpnh48/UI-Design-GameOn-FR?node-id=106-630)
+- [Base code repo on GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/)
+- [Open Issues on GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues)
+
+---
+
+## 👀 Preview
+
+| Home page                                             | Modal form                                          | Confirmation page                                                 |
+|-------------------------------------------------------|-----------------------------------------------------| ----------------------------------------------------------------- |
+| ![Home page desktop](./assets/homepage_1440x1024.png) | ![Modal form desktop](./assets/modal_1440x1024.png) | ![Confirmation page desktop](./assets/confirmation_1440x1024.png) |
+| ![Home page mobile](./assets/homepage_390x844.png)    | ![Modal form mobile](./assets/modal_390x844.png)    | ![Confirmation page mobile](./assets/confirmation_390x844.png)    |
+
+🔗 [Live preview](https://sedomu.github.io/oc_p4_gameon/)
+
+---
+
+## 🏗 Project structure
+
+- `src/`
+    - `index.html` → Main HTML file
+    - `modal.js` → JavaScript for handling modal display and form validations
+
+---
+
+## 🛠 Tech stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+---
+
+## ✅ Code validation
+The HTML and CSS code was validated using the official [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsedomu.github.io%2Foc_p4_gameon%2F) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsedomu.github.io%2Foc_p4_gameon%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr).
+No errors were reported.
+
+---
+
+## ⚙️ Installation
+
+### 📋 Requirements
+- None (this project only requires a web browser)
+
+### 🚀 Steps
+Clone the repository:
+
+```bash
+git clone https://github.com/sedomu/oc_p4_gameon.git
+```
+
+Then simply open the file `index.html` in your web browser:
+
+```bash
+open ./src/index.html
+```
+
+### 🤖 Deployment
+
+This project is automatically deployed to GitHub Pages via a GitHub Actions workflow.
+No manual deployment steps are required.
+
+---
+
+## 📜 Scripts available
+
+Not applicable – no build tools or package managers are needed for this project.
+
+---
+
+## ❌ Issues on the original repo
+
+- [X] TODO : close the modal
+- [X] Implement form entries
+- [X] Add validation or error messages
+- [X] Add confirmation when submitted successfully
+- [X] Manual tests implementation protocol
+
+---
+
+## ✅ Tests protocol
+
+42 manual test cases were implemented to verify form validation logic.  
+
+✅  All tests passed successfully.  
+
+[See TESTS.md](./TESTS.md)
+
+---
+
+## ⚠️ Disclaimer
+
+This project was created as part of the OpenClassrooms curriculum. **It is not intended for production use.** Some implementations (e.g., accessibility, performance optimization, authentication) were intentionally simplified to **focus on JavaScript form validation.**
